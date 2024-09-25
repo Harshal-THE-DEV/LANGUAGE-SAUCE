@@ -1,0 +1,466 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: rgb(12, 12, 12);
+  transition: all 0.3s ease-in-out;
+}
+
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  color: white;
+  overflow-x: hidden;
+}
+
+#nav {
+  position: sticky;
+  top: 0;
+  background-color: #efeae3;
+  /* Gradient background */
+  z-index: 100;
+  padding: 2vw;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#nav .navLinks {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+#nav #siteLogo {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  width: auto;
+}
+
+#nav #siteLogo h1 {
+  font-size: 2vw;
+  font-weight: 800;
+  width: auto;
+  color: white;
+}
+
+#nav .navLinks .Link {
+  position: relative;
+  padding: 0.7vw 1vw;
+  border-radius: 5vw;
+  overflow: hidden;
+}
+
+#nav .navLinks .Link a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1em;
+  position: relative;
+  z-index: 1;
+  color: rgb(0, 0, 0);
+}
+
+#nav .navLinks .Link::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  left: 0;
+  top: -100%;
+  z-index: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+#nav .navLinks .Link:hover::after {
+  top: 0;
+  border-radius: 5vw;
+}
+
+#nav .navLinks .Link:hover a {
+  color: rgb(255, 255, 255);
+  z-index: 10;
+}
+
+#main .LandingPage {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #efeae3;
+  position: relative;
+  padding: 0 2vw;
+  color: #000000;
+}
+
+.LandingPage .heroSection {
+  height: 65vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.507);
+  margin-bottom: 3vw;
+}
+
+.LandingPage .heroSection .leftHeroSection h3 {
+  font-weight: 600;
+  line-height: 2vw;
+  font-size: 1.8vw;
+  width: 25vw;
+  margin: 50px;
+  overflow-y: hidden;
+  color: #000000;
+}
+
+.LandingPage .heroSection .rightHeroSection h1 {
+  font-weight: 650;
+  line-height: 5.5vw;
+  font-size: 5.5vw;
+  width: 30vw;
+  text-align: right;
+  text-transform: uppercase;
+  overflow-y: hidden;
+  color: #000000;
+}
+
+::selection {
+  background-color: rgba(255, 106, 133, 0.605);
+}
+
+/* Main Scroller Styles */
+#main .scrollerDefine {
+  width: 100%;
+  height: 105vh;
+  /* Fixed typo: changed from 105xvh to 105vh */
+  border-bottom: 1px solid rgba(128, 128, 128, 0.582);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 4vw;
+  padding: 0 2vw;
+}
+
+#main .scrollerDefine .scrollerHeadings {
+  text-align: center;
+}
+
+#main .scrollerDefine .scrollerHeadings h1 {
+  margin: 1.5rem 0;
+  font-size: 3vw;
+  font-weight: 600;
+}
+
+#main .scrollerDefine .scrollerHeadings h2 {
+  font-size: 1.5vw;
+  font-weight: 400;
+}
+
+/* Marquee Line Styling */
+#main .scrollerDefine .scroller {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 3vw;
+}
+
+#main .scrollerDefine .scroller .marquee-line {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  /* Hide overflowing elements */
+  white-space: nowrap;
+  /* Prevent wrapping */
+}
+
+/* Problem Statement Styling */
+.problemStatment {
+  color: #000;
+  margin: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 0.8rem;
+  font-weight: 400;
+}
+
+.problemStatment:hover {
+  transform: scale(1.02);
+  text-decoration: underline;
+}
+
+.HomePage {
+  min-height: 100vh;
+  background-color: #efeae3;
+}
+
+.horizontalScroller {
+  width: 100vw;
+  /* Full viewport width */
+  overflow: hidden;
+  /* Hide overflow to prevent scrollbars */
+  white-space: nowrap;
+  /* No line breaks */
+  display: flex;
+  /* Align items horizontally */
+  align-items: center;
+  /* Center items vertically */
+  position: relative;
+}
+
+.movingContainer {
+  display: inline-flex;
+  /* Keep items inline */
+  align-items: center;
+  /* Center items vertically */
+  gap: 20px;
+  /* Space between items */
+}
+
+.HomePage .horizontalScroller .movingContainer a {
+  text-decoration: none;
+  font-size: 10vw;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-right: 2vw;
+  /* Space between elements */
+  white-space: nowrap;
+  /* Prevent wrapping of text */
+}
+
+.HomePage .horizontalScroller .movingContainer .bulletCircle {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-color: #f8da49;
+  display: inline-block;
+  margin: 0 2vw;
+  /* Space between circles */
+}
+
+.aboutSection {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  margin-top: 10rem;
+}
+
+.aboutSection h1 {
+  padding: 2vw;
+  font-size: 2.5vw;
+  line-height: 5vw;
+}
+
+.aboutSection p {
+  padding: 1.5vw;
+  font-weight: 400;
+  font-size: 2vw;
+  color: orangered;
+}
+
+.loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right,
+      #e9b055,
+      #e3d565);
+  /* Gradient background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.loading-word {
+  color: orangered;
+  font-size: 15vw;
+  font-weight: 600;
+  letter-spacing: -30px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.PAGE {
+  z-index: 1000;
+  position: relative;
+}
+
+
+/* ffooter
+ */
+
+
+footer ::selection {
+  background-color: rgba(255, 255, 255, 0.432);
+  color: black;
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0);
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  z-index: 0 !important;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  color: white;
+}
+
+.topFoot {
+  display: flex;
+  flex-direction: row;
+}
+
+.midFoot {
+  height: 40vh;
+  padding-left: 80px;
+  padding-right: 80px;
+  font-size: 6vw;
+  color: white;
+  font-weight: 900;
+}
+
+.bottomFoot {
+  height: 16vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 40px;
+  font-size: 7vh;
+  color: white;
+}
+
+.topFootLeft {
+  width: 50%;
+  height: 40vh;
+}
+
+.FooterLinks {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.FooterLink {
+  font-size: 4vh;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  padding-left: 80px;
+  padding-right: 30px;
+}
+
+.topFootRight {
+  width: 50%;
+  height: 40vh;
+  padding-left: 80px;
+  padding-right: 30px;
+  font-size: 5vh;
+  font-weight: 700;
+}
+
+.topFootRight p {
+  padding-top: 40px;
+  padding-left: 300px;
+}
+
+.topFootRight input {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  border-bottom: rgb(255, 255, 255) 1px solid;
+  height: 5vh;
+  width: 50vh;
+  margin-left: 300px;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 500;
+
+}
+
+.links {
+  padding: 30px;
+}
+
+
+.overlay {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  background-color: rgb(0, 0, 0);
+}
+
+
+.background-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.content {
+  z-index: 1;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+path {
+  filter: blur(10px);
+}
+
+.Copyright {
+  font-size: 3vh;
+  margin-top: 30px;
+  color: white;
+}
+
+#social {
+  color: white;
+  font-size: 5vh;
+}

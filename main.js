@@ -53,6 +53,63 @@ gsap.to("path", {
   ],
 });
 
+// Create the animations and store them in variables
+const problemStatement1Anim = gsap.to(".problemStatment1", {
+  duration: 20,
+  x: 5000,
+  ease: "power1.inOut",
+  repeat: -1,
+  yoyo: true,
+  paused: false // Animation is active initially
+});
+
+const problemStatement2Anim = gsap.to(".problemStatment2", {
+  duration: 20,
+  x: -5000,
+  ease: "power1.inOut",
+  repeat: -1,
+  yoyo: true,
+  paused: false // Animation is active initially
+});
+
+const problemStatement3Anim = gsap.to(".problemStatment3", {
+  duration: 25,
+  x: 8000,
+  ease: "power1.inOut",
+  repeat: -1,
+  yoyo: true,
+  paused: false // Animation is active initially
+});
+
+// Use mouseenter to pause animation and mouseleave to resume
+document.querySelector(".problemStatment1").addEventListener("mouseenter", () => {
+  problemStatement1Anim.pause();
+});
+
+document.querySelector(".problemStatment1").addEventListener("mouseleave", () => {
+  problemStatement1Anim.resume();
+});
+
+document.querySelector(".problemStatment2").addEventListener("mouseenter", () => {
+  problemStatement2Anim.pause();
+});
+
+document.querySelector(".problemStatment2").addEventListener("mouseleave", () => {
+  problemStatement2Anim.resume();
+});
+
+document.querySelector(".problemStatment3").addEventListener("mouseenter", () => {
+  problemStatement3Anim.pause();
+});
+
+document.querySelector(".problemStatment3").addEventListener("mouseleave", () => {
+  problemStatement3Anim.resume();
+});
+
+
+
+
+
 
 gsap.registerPlugin(ScrollTrigger);
 

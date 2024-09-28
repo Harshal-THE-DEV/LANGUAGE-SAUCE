@@ -203,7 +203,7 @@ body {
 }
 
 /* Problem Statement Styling */
-.problemStatment {
+.problemStatment1,.problemStatment2 ,.problemStatment3{
   color: #000;
   margin: 1rem;
   font-size: 2rem;
@@ -359,6 +359,10 @@ footer ::selection {
   color: white;
   font-weight: 900;
 }
+.midFoot p {
+  margin-bottom: 50px;
+  color: white;
+}
 
 .bottomFoot {
   height: 16vh;
@@ -463,4 +467,8 @@ path {
 #social {
   color: white;
   font-size: 5vh;
+}
+
+@media (max-width: 425px) {
+
 }
